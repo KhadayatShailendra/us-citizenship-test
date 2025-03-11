@@ -797,7 +797,7 @@ function App() {
     <div className="App">
       <div {...swipeHandlers} className="question-container">
         <div className="question-card">
-          <h2 onClick={toggleAnswer}>{questions[currentIndex].question}</h2>
+          <h2 onClick={toggleAnswer}>{currentIndex + 1}. {questions[currentIndex].question}</h2>
           {showAnswer && (
             <ul>
               {questions[currentIndex].answers.map((answer, index) => (
