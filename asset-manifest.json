@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/us-citizenship-test/static/css/main.1071c64e.css",
+    "main.js": "/us-citizenship-test/static/js/main.037093de.js",
+    "static/js/453.8eaae800.chunk.js": "/us-citizenship-test/static/js/453.8eaae800.chunk.js",
+    "index.html": "/us-citizenship-test/index.html",
+    "main.1071c64e.css.map": "/us-citizenship-test/static/css/main.1071c64e.css.map",
+    "main.037093de.js.map": "/us-citizenship-test/static/js/main.037093de.js.map",
+    "453.8eaae800.chunk.js.map": "/us-citizenship-test/static/js/453.8eaae800.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1071c64e.css",
+    "static/js/main.037093de.js"
+  ]
+}
