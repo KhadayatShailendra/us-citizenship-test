@@ -157,7 +157,7 @@ const questions = [
   {
     id: 23,
     question: "Name your U.S. Representative.",
-    answers: ["Answers will vary. [For example, if you live in San Francisco, your U.S. Representative is Nancy Pelosi.]"],
+    answers: ["Gabe Evans (if you live in Colorado)"],
   },
   {
     id: 24,
@@ -186,12 +186,12 @@ const questions = [
   {
     id: 28,
     question: "What is the name of the President of the United States now?",
-    answers: ["Joe Biden"],
+    answers: ["Donald J. Trump"],
   },
   {
     id: 29,
     question: "What is the name of the Vice President of the United States now?",
-    answers: ["Kamala Harris"],
+    answers: ["J.D. Vance"],
   },
   {
     id: 30,
@@ -294,12 +294,12 @@ const questions = [
   {
     id: 43,
     question: "Who is the Governor of your state now?",
-    answers: ["Answers will vary. [For example, in California, the Governor is Gavin Newsom.]"],
+    answers: ["Jared Polis (if you live in Colorado)"],
   },
   {
     id: 44,
     question: "What is the capital of your state?",
-    answers: ["Answers will vary. [For example, the capital of California is Sacramento.]"],
+    answers: ["Denver"],
   },
   {
     id: 45,
@@ -309,7 +309,7 @@ const questions = [
   {
     id: 46,
     question: "What is the political party of the President now?",
-    answers: ["Democratic Party"],
+    answers: ["Republican"],
   },
   {
     id: 47,
@@ -795,7 +795,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Question & Answer App</h1>
       <div {...swipeHandlers} className="question-container">
         <div className="question-card">
           <h2 onClick={toggleAnswer}>{questions[currentIndex].question}</h2>
