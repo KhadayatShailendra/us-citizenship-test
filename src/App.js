@@ -142,7 +142,7 @@ const questions = [
   {
     id: 20,
     question: "Who is one of your state’s U.S. Senators now?",
-    answers: ["Answers will vary. [For example, in California, the U.S. Senators are Dianne Feinstein and Alex Padilla.]"],
+    answers: ["Michael F. Bennet (if you live in Colorado)", "John W. Hickenlooper (if you live in Colorado)"],
   },
   {
     id: 21,
@@ -157,7 +157,7 @@ const questions = [
   {
     id: 23,
     question: "Name your U.S. Representative.",
-    answers: ["Gabe Evans (if you live in Colorado)"],
+    answers: ["Gabe Evans (if you live in Colorado)", "Brittany Pettersen (if you live in Colorado)"],
   },
   {
     id: 24,
