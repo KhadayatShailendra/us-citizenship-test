@@ -764,48 +764,28 @@ const questions = [
 ];
 
 function App() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(null); // Track the ID of the currently visible answer
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === questions.length - 1 ? 0 : prevIndex + 1
-    );
-    setShowAnswer(false); // Hide answer when moving to the next question
+  // Toggle answer visibility for a specific question
+  const toggleAnswer = (id) => {
+    setShowAnswer((prev) => (prev === id ? null : id)); // Close the previous answer and open the new one
   };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? questions.length - 1 : prevIndex - 1
-    );
-    setShowAnswer(false); // Hide answer when moving to the previous question
-  };
-
-  const toggleAnswer = () => {
-    setShowAnswer((prev) => !prev);
-  };
-
-  // Swipe handlers
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => handleNext(), // Swipe left for next question
-    onSwipedRight: () => handlePrev(), // Swipe right for previous question
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
 
   return (
     <div className="App">
-      <div {...swipeHandlers} className="question-container">
-        <div className="question-card">
-          <h2 onClick={toggleAnswer}>{currentIndex + 1}. {questions[currentIndex].question}</h2>
-          {showAnswer && (
-            <ul>
-              {questions[currentIndex].answers.map((answer, index) => (
-                <li key={index}>{answer}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+      <div className="questions-container" style={{ overflowY: "scroll", height: "100vh" }}>
+        {questions.map((q) => (
+          <div key={q.id} className="question-card" onClick={() => toggleAnswer(q.id)}>
+            <h2>{q.id}. {q.question}</h2>
+            {showAnswer === q.id && (
+              <ul>
+                {q.answers.map((answer, index) => (
+                  <li key={index}>{answer}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
